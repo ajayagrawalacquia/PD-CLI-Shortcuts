@@ -77,3 +77,11 @@ pdoc
 ```
 
 _Note:_ `pdoc` _function will display only the Hotseat details of **Ops Team** here. If you are from any other team, Please change the **Team ID** in the function. You can check your Team ID using_ `pd ep:list`
+
+Whatever mentioned above is just the description of what ***Functions*** do and not about what the tool is capable of. Feel free to read about all the functionalities this tool provides [Here](https://github.com/martindstone/pagerduty-cli)
+
+You can consider this as a Shortcut of using the actual PD CLI effectively 😊 
+
+_As this will be always a Work In Progress based upon the needs of the Team, Feel free to Contribute and let's make the Hotseat a little Cool 😉_
+
+Enjoy 🔥
