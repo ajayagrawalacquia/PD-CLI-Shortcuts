@@ -1,9 +1,6 @@
 # Pager Duty CLI Shortcuts
 ## _Automate your HotSeat like Never Before_ 💪
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 This is NOT an entirly New Tool but a set of Functions which are written using the Already Existing Pager Duty CLI Tool.
 And hence, The Major Dependency to use this is to have the existing tool Installed on your Computer.
