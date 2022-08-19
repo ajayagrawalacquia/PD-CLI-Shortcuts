@@ -1,0 +1,103 @@
+alias pls="pd incident:list --columns=ID,Status,Title,'Assigned to',URL --no-truncate -m"
+alias plsA="pd incident:list"
+
+packall ()
+{
+    echo "";
+    pd incident:ack -m;
+    echo "";
+    echo " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+    echo -e " You just Acknowledged all the Incidents which were there on PD and are assigned to you 🥳";
+    echo " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+    echo "";
+    echo "And below are the incidents which are present on PD currently";
+    pd incident:list --columns=ID,Status,Title,'Assigned to',URL --no-truncate -m;
+    echo "";
+    echo "- - - - - - - - - - Back to Work now, Mate 🤓 - - - - - - - - - -";
+    echo "";
+}
+
+
+packallA ()
+{
+    plist=$(pd incident:list --columns=ID | tail -n +3 | tr '\n' ',' | rev | cut -c2- | rev);
+    pd incident:ack -i $plist;
+    echo "";
+    echo " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+    echo -e " You just Acknowledged ALL the incidents which were there on PD regardless it was assigned to you or not 😉";
+    echo " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+    echo "";
+    echo "And below are the incidents which are present on PD currently";
+    pd incident:list;
+    echo "";
+}
+
+
+pres ()
+{
+    [ $# -lt 1 ] && echo "Usage: ${FUNCNAME[0]} IDs(CSV)" && return 0;
+    local IDs=$1;
+    pd incident:resolve -i $IDs;
+    echo "";
+    echo "Congratulations! Incident(s) Resolved 💪 Way to go 🔥 🔥 🔥";
+    echo ""
+}
+
+presall() {
+    echo "Below are the Incidents which are assigned to you currently on PD 🥲"
+    pd incident:list --columns=ID,Status,Title,'Assigned to',URL --no-truncate -m
+    echo ""
+    echo "Resolving all the above Incidents Now 🤘";
+    pd incident:resolve -m
+    echo ""
+    echo -e "🔥 🔥 All Incidents Ended 🔥 🔥"
+    pd incident:list --columns=ID,Status,Title,'Assigned to',URL --no-truncate -m;
+    echo "Time to Relax 😍"
+    echo ""
+}
+
+presallA() {
+    echo "Below are the Incidents which are available on PD now (Regardless it's assigned to you or not) 🤔"
+    plist=$(pd incident:list --columns=ID | tail -n +3 | tr '\n' ',' | rev | cut -c2- | rev);
+    pd incident:list --columns=ID,Status,Title,'Assigned to',URL --no-truncate
+    echo ""
+    echo "Resolving all the above Incidents Now 🤘";
+    pd incident:resolve -i $plist
+    echo ""
+    echo -e "🔥 🔥 All Incidents Ended 🔥 🔥"
+    echo "Time to Relax 😍"
+    echo ""
+}
+
+packloop() {
+while :
+do
+        echo "";
+        echo "Sit back ! Relax 😄 Your Incidents will be Acknowledged 🗃 in every 15 seconds 🪄";
+        pd incident:ack -m
+        echo ""
+        echo "And below are your Incidents which are present on PD currently";
+        pd incident:list;
+        echo "";
+        sleep 15
+        echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+        echo "";
+done
+}
+
+packloopA() {
+while :
+do
+        echo "";
+        echo "Sit back ! Relax 😄 All Incidents from PD will be Acknowledged 🗃 in every 15 seconds 🪄";
+        plist=$(pd incident:list --columns=ID | tail -n +3 | tr '\n' ',' | rev | cut -c2- | rev);
+        pd incident:ack -i $plist;
+        echo ""
+        echo "And below are the incidents which are present on PD currently";
+        pd incident:list;
+        echo "";
+        sleep 15
+        echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
+        echo "";
+done
+}
