@@ -6,7 +6,7 @@ This is NOT an entirely New Tool but a set of Functions which are written using 
 And hence, The Major Dependency to use this is to have the existing tool Installed on your Computer.
 
 
-Please download the tool from [Here](https://github.com/martindstone/pagerduty-cli) or you can follow any of ther Installation Methods mentioned [In this Page](https://github.com/martindstone/pagerduty-cli/wiki/PagerDuty-CLI-User-Guide)
+Please download the tool from [Here](https://github.com/martindstone/pagerduty-cli) or you can follow any of the Installation Methods mentioned [In this Page](https://github.com/martindstone/pagerduty-cli/wiki/PagerDuty-CLI-User-Guide)
 
 Once you've Installed the PagerDuty CLI from the GitHub Link provided above. Please run the below bunch of Commands to get the Functions in your bashrc & Start using the Shortcuts 😊
 ```sh
