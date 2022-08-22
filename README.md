@@ -20,7 +20,7 @@ source ~/.bashrc
 plsA
 ```
 
-If `plsA` works and gives you output such as
+If  `plsA`  works and gives you output such as
 ```sh
 Getting incidents 1/1 👍, 0/1 👎... done
 ```
