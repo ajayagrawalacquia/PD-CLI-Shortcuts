@@ -8,6 +8,25 @@ And hence, The Major Dependency to use this is to have the existing tool Install
 
 Please download the tool from [Here](https://github.com/martindstone/pagerduty-cli) or you can follow any of ther Installation Methods mentioned [In this Page](https://github.com/martindstone/pagerduty-cli/wiki/PagerDuty-CLI-User-Guide)
 
+Once you've Installed the PaderDuty CLI from the GitHub Link provided above. Please run the below bunch of Commands to get the Functions in your bashrc & Start using the Shortcuts 😊
+```sh
+mkdir ~/Documents/PDCLI
+cd ~/Documents/PDCLI
+git clone https://github.com/ajayagrawalacquia/PD-CLI-Shortcuts.git
+cd PD-CLI-Shortcuts
+echo 'PDCLIFUNCS=~/Documents/PDCLI/PD-CLI-Shortcuts/PDFunctions' >> ~/.bashrc
+echo 'source $PDCLIFUNCS' >> ~/.bashrc
+source ~/.bashrc
+plsA
+```
+
+If plsA works and gives you output such as
+```sh
+Getting incidents 1/1 👍, 0/1 👎... done
+```
+
+Congratulations ✨ You've Successfully Installed PagerDuty CLI and got those functions on your Bashrc 🔥
+
 This Tool has a lot of Potential to Automate a lot of things when it comes to PagerDuty and Hence, It'll feel like a blessing on the days when we have really busy Hotseats 😊
 
 
