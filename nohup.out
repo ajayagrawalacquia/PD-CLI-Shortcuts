@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/ajay.agrawal/Desktop/MyScriptsBash/MickMotivs/MickMotivs.py", line 22, in <module>
+    allquotes = open("allquotes.txt", "r")
+FileNotFoundError: [Errno 2] No such file or directory: 'allquotes.txt'
+Traceback (most recent call last):
+  File "/Users/ajay.agrawal/Desktop/MyScriptsBash/MickMotivs/MickMotivs.py", line 22, in <module>
+    allquotes = open("allquotes.txt", "r")
+FileNotFoundError: [Errno 2] No such file or directory: 'allquotes.txt'
