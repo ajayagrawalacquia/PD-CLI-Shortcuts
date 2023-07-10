@@ -102,6 +102,18 @@ do
 done
 }
 
+
+presK ()
+{
+    [ $# -lt 1 ] && echo "Usage: ${FUNCNAME[0]} Alert_keyword" && return 0;
+    pdkeyword=$1
+    echo -e "Resolving all the Incidents which are assigned to you containing the keyword $pdkeyword in their description"
+    issueids=$(pls | grep -i $pdkeyword | awk '{print $1}')
+    for i in $issueids; do echo -e "Resolving $i now..."; pres $i; done;
+    echo -e ""Bahut badiya bhai 🤘;
+}
+
+
 pdoc ()
 {
     echo "";
