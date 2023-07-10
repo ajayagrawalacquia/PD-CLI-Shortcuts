@@ -90,6 +90,11 @@ To **Resolve** all the Indicents on PD (Regardless it's assigned to you or not)
 presallA
 ```
 
+To **Resolve** all the Indicents on PD containing a certain keyword in their Incident Description
+```sh
+presk <keyword>
+```
+
 To Display who is in Primary and Secondary Hotseat Currently
 ```sh
 pdoc
